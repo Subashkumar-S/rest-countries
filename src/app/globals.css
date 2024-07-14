@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .buttonSize{
+        @apply w-6 h-6 sm:w-6 sm:h-6 ;
+    }
+    .padding{
+        @apply px-[5vw] sm:px-[10vw];
+    }
+}
