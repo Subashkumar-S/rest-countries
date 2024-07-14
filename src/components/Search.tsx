@@ -11,7 +11,7 @@ export default function Search(){
   };
 
     return(
-        <form className="bg-darkBlue flex items-center gap-2 w-[90%] sm:w-80 max-sm:mx-auto rounded  p-2 max-sm:my-6" >
+        <form className="bg-white text-veryDarkBlue dark:bg-darkBlue dark:text-white flex items-center gap-2 w-[90%] sm:w-80 max-sm:mx-auto rounded  p-2 max-sm:my-6 shadow-lg shadow-gray-400 dark:shadow-gray-800" >
             <IoSearch className="buttonSize" />
             <input name="countries" placeholder="Search by country" className="outline-none border-none bg-transparent" onChange={handleInputChange}/>
         </form>

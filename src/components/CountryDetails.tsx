@@ -1,7 +1,13 @@
-export default function CountryDetails({ country }) {
+import { Country } from "@/types/types";
+
+interface CountryDetailsProps {
+    country: Country | null; 
+}
+
+const CountryDetails: React.FC<CountryDetailsProps> = ({ country }) => {
     console.log(country);
     return (
-        <div className="flex flex-col gap-6 mb-2">
+        <div className="flex flex-col gap-6 mb-2 font-nunito">
             <h2 className="font-black text-3xl">{country?.name?.official}</h2>
             <div className="flex flex-col sm:flex-row text-lg gap-2 sm:gap-4 flex-wrap leading-10">
                 <ul className="">
@@ -62,3 +68,5 @@ export default function CountryDetails({ country }) {
         </div>
     );
 }
+
+export default CountryDetails;

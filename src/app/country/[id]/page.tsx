@@ -4,7 +4,7 @@ import Detail from "@/components/Detail";
 
 export default function Country(){
     return (
-        <main className="bg-veryDarkBlue  text-White w-full min-h-[100vh]">
+        <main className="bg-veryLightGray text-veryDarkBlue dark:bg-veryDarkBlue dark:text-White w-full min-h-[100vh]">
             <Header />
             <Panel />
             <Detail />

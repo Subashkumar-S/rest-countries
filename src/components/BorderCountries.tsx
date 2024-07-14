@@ -1,8 +1,12 @@
 import BorderCountry from "@/components/BorderCountry";
 
-export default function BorderCountries({ borderCountries : any}) {
+type BorderCountriesProps = {
+    borderCountries: string[];
+};
 
+const BorderCountries: React.FC<BorderCountriesProps>= ({ borderCountries}) => {
 
+    console.log("Border countries: ", borderCountries);
     return (
         <div className="flex gap-4 items-center flex-wrap">
             <h5 className=" text-lg basis-56">Border Countries :</h5>
@@ -11,8 +15,8 @@ export default function BorderCountries({ borderCountries : any}) {
                     <li>
                         <p>No borders</p>
                     </li> :
-                    borderCountries.map((country) => (
-                        <BorderCountry key={country.cca3} country={country} />
+                    borderCountries.map((country, index) => (
+                        <BorderCountry key={index} country={country} />
                     ))
 
                 }
@@ -20,3 +24,5 @@ export default function BorderCountries({ borderCountries : any}) {
         </div>
     )
 }
+
+export default BorderCountries;
